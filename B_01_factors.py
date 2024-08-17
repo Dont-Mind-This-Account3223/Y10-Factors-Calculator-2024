@@ -47,7 +47,7 @@ def num_check(question):
 statement_generator("The Ultimate Factor Finder", "-")
 
 # Display instructions if requested
-want_instructions = input("Press <enter> to read the instructions"
+want_instructions = input("Press <enter> to read the instructions "
                           "or any key to continue")
 
 if want_instructions == "":
