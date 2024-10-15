@@ -41,6 +41,31 @@ def num_check(question):
         except ValueError:
             print(error)
 
+def factor(var_to_factor):
+    factors_list = []
+    # to_factor = num_check("To factor: ")
+
+    # square root the number to work out when to stop looping.
+    stop = var_to_factor ** 0.5
+    stop = int(stop)
+
+    for item in range(1, stop + 1):
+
+        # check to see if the item is a factor
+        if to_factor % item == 0:
+            factors_list.append(item)
+
+            # calculate partner
+            partner = to_factor // item
+
+            # add partner to the list (but prevent duplicates)
+            if partner not in factors_list:
+                factors_list.append(partner)
+
+    # return sorted list
+    factors_list.sort()
+    return factors_list
+
 
 # Main Routine Goes Here
 
